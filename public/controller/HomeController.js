@@ -1,5 +1,6 @@
 $(function () {
     try {
+        $("#includedNavbar").load("public/static/templates/navbar.html"); 
         alteraVariavelGlobal(data);
         var resultadoFiltrado = filtraDado();
         var resultadoGerado = geraDado(resultadoFiltrado);

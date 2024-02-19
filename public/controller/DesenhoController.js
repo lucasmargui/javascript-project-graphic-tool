@@ -28,7 +28,9 @@ function drawCore(filtros, dados) {
               drawFace(larguraProporcao, alturaProporcao, profundidadeProporcao, posicaoFace);
               break;
           case "furo":
-              furacaoWidgets = drawFuro(lista_de_parametros, posicaoFace);
+              //altera variavel global 
+              const furacao = drawFuro(lista_de_parametros, posicaoFace);
+              alteraVariavelGlobalFuracaoWidgets(furacao);
               break;
           case "line":
               drawLine(larguraProporcao, alturaProporcao, profundidadeProporcao, lista_de_parametros, posicaoFace);

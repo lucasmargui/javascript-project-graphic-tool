@@ -8,9 +8,11 @@
 
 
 
-    <link rel="stylesheet" href="public/css/bootstrap/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/static/css/style.css">
 
 
 
@@ -23,77 +25,94 @@
 <body class="color2">
 
 
-
-    <div id="bodyContentCanvas">
-        <!-- SIDEBAR -->
-        <form class="" id="filtro" action="" method="post">
-            <br>
-            <div class="row justify-content-md-center">
-                <div class="col col-lg-8">
-                    <div class="row">
-                        <div class="col col-lg-3">
-                            <div class="containerSelect">
-
-                                <div id="list1" class="dropdown-check-list" tabindex="100">
-                                    <span class="anchor">Layers</span>
-                                    <ul class="items">
-                                        <li><input type="checkbox" name="filtro" value="face" checked="checked">Face
-                                        </li>
-                                        <li><input type="checkbox" name="filtro" value="furo" checked="checked">Furo
-                                        </li>
-                                        <li><input type="checkbox" name="filtro" value="line" checked="checked">Linha
-                                        </li>
-                                        <li><input type="checkbox" name="filtro" value="tabela" checked="checked">Tabela
-                                        </li>
-                                        <li><input type="checkbox" name="filtro" value="orientation"
-                                                checked="checked">XY </li>
-                                        <li><input type="checkbox" name="filtro" value="marcacaoFuro"
-                                                checked="checked">Marcacao </li>
-                                        <li><input type="checkbox" name="filtro" value="marcacaoCoordenada"
-                                                checked="checked">Coordenada</li>
-                                        <li><input type="checkbox" name="filtro" value="marcacaoDistancia">Distância
-                                        </li>
-                                        <li><input type="checkbox" name="filtro" value="marcacaoLegenda"
-                                                checked="checked">Legenda</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col col-lg-3">
-                            <div class="containerSlider">
-                                <label for="rangescale">Escala</label>
-                                <input type="range" min="1.3" max="4" value="1.3" step="0.1"
-                                    oninput="changeScale(this.value)">
-                            </div>
-                        </div>
-                        <div class="col col-lg-3">
-                            <div class="containerSlider">
-                                <label for="rangescale">Centro</label>
-                                <input type="range" min="-2000" max="2000" value="0" step="5"
-                                    oninput="changeCenter(this.value)">
-                            </div>
-                        </div>
-                        <div class="col col-lg-3">
-                            <div class="containerInputNumber">
-                                <label for="rangescale">L</label>
-                                <input type="number" name="filtro" value="0" step="25"
-                                    oninput="changeLeft(this.value)" />
-                                <label for="rangescale">R</label>
-                                <input type="number" name="filtro" value="0" step="25"
-                                    oninput="changeRight(this.value)" />
-                                <label for="rangescale">D</label>
-                                <input type="number" name="filtro" value="0" step="25"
-                                    oninput="changeDown(this.value)" />
-                                <label for="rangescale">U</label>
-                                <input type="number" name="filtro" value="0" step="25" oninput="changeUp(this.value)" />
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+      
+          <div class="navbar-header">
+            <a href="#">
+              <h4>Ferramenta <span>Gráfica</span></h4>
+            </a>
+          </div>
+      
+          <div class="navbar-menu" id="open-navbar1">
+            <form class="" id="filtro" action="" method="post">
+                <div class="row p-3">
+                    <div class="col-auto">
+                        <div class="containerSelect">
+    
+                            <div id="list1" class="dropdown-check-list" tabindex="100">
+                                <span class="anchor">Layers</span>
+                                <ul class="items">
+                                    <li><input type="checkbox" name="filtro" value="face" checked="checked">Face
+                                    </li>
+                                    <li><input type="checkbox" name="filtro" value="furo" checked="checked">Furo
+                                    </li>
+                                    <li><input type="checkbox" name="filtro" value="line" checked="checked">Linha
+                                    </li>
+                                    <li><input type="checkbox" name="filtro" value="tabela" checked="checked">Tabela
+                                    </li>
+                                    <li><input type="checkbox" name="filtro" value="orientation"
+                                            checked="checked">XY </li>
+                                    <li><input type="checkbox" name="filtro" value="marcacaoFuro"
+                                            checked="checked">Marcacao </li>
+                                    <li><input type="checkbox" name="filtro" value="marcacaoCoordenada"
+                                            checked="checked">Coordenada</li>
+                                    <li><input type="checkbox" name="filtro" value="marcacaoDistancia">Distância
+                                    </li>
+                                    <li><input type="checkbox" name="filtro" value="marcacaoLegenda"
+                                            checked="checked">Legenda</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+    
+                    <div class="col-auto">
+                        <div class="containerSlider">
+                            <label for="rangescale">Escala</label>
+                            <input type="range" min="1.3" max="4" value="1.3" step="0.1"
+                                oninput="changeScale(this.value)">
+                        </div>
+                    </div>
+    
+                    <div class="col-auto">
+                        <div class="containerSlider">
+                            <label for="rangescale">Centro</label>
+                            <input type="range" min="-2000" max="2000" value="0" step="5"
+                                oninput="changeCenter(this.value)">
+                        </div>
+                    </div>
+    
+                    <div class="col-auto">
+                        <div class="containerInputNumber">
+                            
+                                <label for="rangescale" style="padding-left: 20px;padding-right: 20px;">L</label>
+                                <input type="number" name="filtro" value="0" step="25"
+                                    oninput="changeLeft(this.value)" />
+                                   
+                                <label for="rangescale" style="padding-left: 20px;padding-right: 20px;">R</label>
+                                <input type="number" name="filtro" value="0" step="25"
+                                    oninput="changeRight(this.value)" />
+                                 
+                                <label for="rangescale" style="padding-left: 20px;padding-right: 20px;">D</label>
+                                <input type="number" name="filtro" value="0" step="25"
+                                    oninput="changeDown(this.value)" />
+                             
+                                <label for="rangescale" style="padding-left: 20px;padding-right: 20px;">U</label>
+                                <input type="number" name="filtro" value="0" step="25" oninput="changeUp(this.value)" />
+                           
+                      
+                        </div>
+                    </div>
+    
+    
                 </div>
-            </div>
-        </form>
-        <hr>
+            </form>
+          </div>
+    
+        </div>
+      </nav>
+ 
+      
         <!-- CONTENT -->
         <div id="main">
             <!-- TOOLTIP -->
@@ -108,27 +127,44 @@
             <!-- CANVAS -->
         </div>
         <!-- CONTENT -->
-    </div>
+
+
 
 
 </body>
 
-<script type="text/javascript" src="public/js/jquery/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="public/css/bootstrap/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+<!-- TRADUTOR DE TIPO DE FURACAO -->
 
 <script src="translator.js"></script>
-<script src="public/js/data.js"></script>
-<script src="public/js/global_variables.js"></script>
-<script src="public/js/draw.js"></script>
-<script src="public/js/change.js"></script>
-<script src="public/js/get.js"></script>
-<script src="public/js/agrupa_info.js"></script>
-<script src="public/js/function.js"></script>
-<script src="public/js/canvas.js"></script>
-<script src="public/js/controller.js"></script>
-<script src="public/js/events.js"></script>
-<script src="public/js/model.js"></script>
+
+
+<!-- STATIC -->
+
+<script src="public/static/js/data.js"></script>
+<script src="public/static/js/global_variables.js"></script>
+<script src="public/static/js/function.js"></script>
+<script src="public/static/js/events.js"></script>
+
+<!-- SERVICES -->
+
+<script src="public/services/desenhaFiguraGeometrica.js"></script>
+<script src="public/services/posicionaTooltipNasFuracoes.js"></script>
+<script src="public/services/acessaCoordenadasTabelas.js"></script>
+<script src="public/services/agrupaDados.js"></script>
+
+<!-- CONTROLLER -->
+
+<script src="public/controller/DesenhoController.js"></script>
+<script src="public/controller/HomeController.js"></script>
+
+<!-- MODEL -->
+
+<script src="public/model/FiguraGeometrica.js"></script>
 
 
 
