@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sidebar 04</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <link rel="stylesheet" href="public/css/bootstrap/bootstrap-4.0.0/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="public/css/style.css">
+
+
+
+
+
+
+
+</head>
+
+<body class="color2">
+
+
+
+    <div id="bodyContentCanvas">
+        <!-- SIDEBAR -->
+        <form class="" id="filtro" action="" method="post">
+            <br>
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-8">
+                    <div class="row">
+                        <div class="col col-lg-3">
+                            <div class="containerSelect">
+
+                                <div id="list1" class="dropdown-check-list" tabindex="100">
+                                    <span class="anchor">Layers</span>
+                                    <ul class="items">
+                                        <li><input type="checkbox" name="filtro" value="face" checked="checked">Face
+                                        </li>
+                                        <li><input type="checkbox" name="filtro" value="furo" checked="checked">Furo
+                                        </li>
+                                        <li><input type="checkbox" name="filtro" value="line" checked="checked">Linha
+                                        </li>
+                                        <li><input type="checkbox" name="filtro" value="tabela" checked="checked">Tabela
+                                        </li>
+                                        <li><input type="checkbox" name="filtro" value="orientation"
+                                                checked="checked">XY </li>
+                                        <li><input type="checkbox" name="filtro" value="marcacaoFuro"
+                                                checked="checked">Marcacao </li>
+                                        <li><input type="checkbox" name="filtro" value="marcacaoCoordenada"
+                                                checked="checked">Coordenada</li>
+                                        <li><input type="checkbox" name="filtro" value="marcacaoDistancia">Distância
+                                        </li>
+                                        <li><input type="checkbox" name="filtro" value="marcacaoLegenda"
+                                                checked="checked">Legenda</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col col-lg-3">
+                            <div class="containerSlider">
+                                <label for="rangescale">Escala</label>
+                                <input type="range" min="1.3" max="4" value="1.3" step="0.1"
+                                    oninput="changeScale(this.value)">
+                            </div>
+                        </div>
+                        <div class="col col-lg-3">
+                            <div class="containerSlider">
+                                <label for="rangescale">Centro</label>
+                                <input type="range" min="-2000" max="2000" value="0" step="5"
+                                    oninput="changeCenter(this.value)">
+                            </div>
+                        </div>
+                        <div class="col col-lg-3">
+                            <div class="containerInputNumber">
+                                <label for="rangescale">L</label>
+                                <input type="number" name="filtro" value="0" step="25"
+                                    oninput="changeLeft(this.value)" />
+                                <label for="rangescale">R</label>
+                                <input type="number" name="filtro" value="0" step="25"
+                                    oninput="changeRight(this.value)" />
+                                <label for="rangescale">D</label>
+                                <input type="number" name="filtro" value="0" step="25"
+                                    oninput="changeDown(this.value)" />
+                                <label for="rangescale">U</label>
+                                <input type="number" name="filtro" value="0" step="25" oninput="changeUp(this.value)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <hr>
+        <!-- CONTENT -->
+        <div id="main">
+            <!-- TOOLTIP -->
+            <div id="tooltip">
+                <span id="tooltiptext"></span>
+                <span id="close">x</span>
+            </div>
+            <!-- TOOLTIP -->
+
+            <!-- CANVAS -->
+            <canvas id="canvas"></canvas>
+            <!-- CANVAS -->
+        </div>
+        <!-- CONTENT -->
+    </div>
+
+
+</body>
+
+<script type="text/javascript" src="public/js/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="public/css/bootstrap/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+
+
+<script src="translator.js"></script>
+<script src="public/js/data.js"></script>
+<script src="public/js/global_variables.js"></script>
+<script src="public/js/draw.js"></script>
+<script src="public/js/change.js"></script>
+<script src="public/js/get.js"></script>
+<script src="public/js/agrupa_info.js"></script>
+<script src="public/js/function.js"></script>
+<script src="public/js/canvas.js"></script>
+<script src="public/js/controller.js"></script>
+<script src="public/js/events.js"></script>
+<script src="public/js/model.js"></script>
+
+
+
+</html>
