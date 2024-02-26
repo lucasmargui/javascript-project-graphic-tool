@@ -32,4 +32,7 @@ const data = [
 ```
 # Resultado
 
-![image](https://github.com/lucasmargui/Javascript_Projeto_FerramentaGrafica/assets/157809964/62da8aec-27fb-480a-b957-e6d7f15b895c)
+<div align="center">
+<img src="https://github.com/lucasmargui/Javascript_Projeto_FerramentaGrafica/assets/157809964/62da8aec-27fb-480a-b957-e6d7f15b895c" style="width:100%">
+</div>
+
